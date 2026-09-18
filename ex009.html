@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturalidade</title>
+</head>
+<body>
+    <h1>De onde voce eh?</h1>
+    Seu país: <input type= "name" name="txt" id="txt">
+    <input type="button" value="verificar" onclick= "verificar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        var txt= window.document.getElementById('txt')
+
+        function verificar(){
+            var txt= window.document.getElementById('txt')
+            var res= window.document.querySelector('div#res')
+            var pais= txt.value
+            res.innerHTML= `<p>Seu país eh <strong>${pais}</strong></p>`
+            if(pais == 'Brasil'){
+                res.innerHTML+= `<p>Voce eh <strong>brasileiro!</strong></p>`
+            }else{
+                res.innerHTML+= `<p>Voce eh <strong>estrangeiro.</strong></p>`
+            }
+        }
+    </script>
+
+</body>
+</html>
